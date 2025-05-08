@@ -23,18 +23,22 @@ import {
   mongodb,
   git,
   figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
+  plantsproject,
+  web3project,
+  dxc,
   threejs,
+  WeVerve,
+  neodove,
+  cubane,
+  web3,
+  reactproject,
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
+  {
+    id: "home",
+    title: "Home",
+  },
   {
     id: "about",
     title: "About",
@@ -55,7 +59,7 @@ const services: TService[] = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Frontend Developer",
     icon: mobile,
   },
   {
@@ -63,7 +67,7 @@ const services: TService[] = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Blockchain Developer",
     icon: creator,
   },
 ];
@@ -118,62 +122,63 @@ const technologies: TTechnology[] = [
     icon: figma,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "web3",
+    icon: web3,
   },
 ];
 
 const experiences: TExperience[] = [
   {
-    title: "React.js Developer",
-    companyName: "Starbucks",
-    icon: starbucks,
+    title: "Linux Admin",
+    companyName: "Dxc Technology",
+    icon: dxc,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "Feb 2022 - May 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    companyName: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Administering and maintaining Linux-based servers and infrastructure, ensuring optimal performance and system stability.",
+      "Collaborating with development and operations teams to deploy and support applications and services on Linux environments.",
+      "Implementing and managing system security measures, including user access controls, firewalls, and intrusion detection systems.",
+      "Participating in system audits and providing feedback on infrastructure improvements and security best practices."
     ],
   },
   {
     title: "Web Developer",
-    companyName: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    companyName: "Weverve Technology",
+    icon: WeVerve,
+    iconBg: "#E6DEDD",
+    date: "Sep 2023 - Dec 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developing and maintaining user-facing web applications leveraging HTML, CSS, JavaScript, and related frontend frameworks.",
+      "Collaborating with designers and product teams to translate mockups and requirements into functional and engaging interfaces.",
+      "Implementing responsive web designs and ensuring optimal user experiences across different screen sizes and browsers.",
+      "Participating in code reviews to ensure code quality, maintainability, and adherence to established development standards."
     ],
   },
   {
-    title: "Full stack Developer",
-    companyName: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    title: "Full Stack Developer",
+    companyName: "neodove",
+    icon: neodove,
+    iconBg: "#383E56",
+    date: "April 2024 - April 2025",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Architecting, developing, and deploying comprehensive web applications encompassing frontend, backend, and databases for optimal performance.",
+      "Collaborating effectively with designers, product owners, and fellow engineers to deliver seamless and high-quality user experiences.",
+      "Implementing responsive layouts and ensuring consistent functionality and appearance across various browsers and devices.",
+      "Actively participating in thorough code reviews, providing insightful feedback, and fostering a collaborative team environment."
+
+    ],
+  },
+  {
+    title: "Blockchain Developer Intern",
+    companyName: "Cubane",
+    icon: cubane,
+    iconBg: "#E6DEDD",
+    date: "April 2025 - Present",
+    points: [
+      "Exploring and contributing to the development of blockchain solutions, including smart contracts and decentralized platforms.",
+      "Working alongside a team of blockchain experts to learn about the full development lifecycle of blockchain-based products.",
+      "Assisting in testing and ensuring the reliability and security of smart contracts and other blockchain components.",
+      "Engaging in discussions and code reviews to gain practical experience in blockchain development methodologies."
     ],
   },
 ];
@@ -181,7 +186,7 @@ const experiences: TExperience[] = [
 const testimonials: TTestimonial[] = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+      "I thought it was impossible to make a website as beautiful as our product, but Ritika proved me wrong.",
     name: "Sara Lee",
     designation: "CFO",
     company: "Acme Co",
@@ -189,7 +194,7 @@ const testimonials: TTestimonial[] = [
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
+      "I've never met a web developer who truly cares about their clients' success like Ritika does.",
     name: "Chris Brown",
     designation: "COO",
     company: "DEF Corp",
@@ -197,7 +202,7 @@ const testimonials: TTestimonial[] = [
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      "After Ritika optimized our website, our traffic increased by 50%. We can't thank them enough!",
     name: "Lisa Wang",
     designation: "CTO",
     company: "456 Enterprises",
@@ -207,9 +212,9 @@ const testimonials: TTestimonial[] = [
 
 const projects: TProject[] = [
   {
-    name: "Car Rent",
+    name: "React_Ecommerce",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A modern and scalable e-commerce solution crafted with React, this platform provides users with a visually appealing and highly functional online storefront. From effortless product discovery to streamlined order management, it delivers a contemporary shopping experience designed for efficiency and growth.It represents a robust and user-friendly solution for online retail.The platform is built using cutting-edge technologies.",
     tags: [
       {
         name: "react",
@@ -224,41 +229,20 @@ const projects: TProject[] = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    sourceCodeLink: "https://github.com/",
+    image: reactproject,
+    sourceCodeLink: "https://github.com/Ritika800/React_E-Commerce",
   },
   {
-    name: "Job IT",
+    name: "Greenary_Website",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "This engaging web application serves as a comprehensive resource for plant enthusiasts. Users can effortlessly explore a diverse catalog of plant species, discover detailed information including estimated care requirements, and locate nearby nurseries or online vendors based on their current location, fostering a deeper connection with the plant world.Users can also connect with other plant lovers to exchange tips and advice",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    sourceCodeLink: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
+        name: "react js",
         color: "green-text-gradient",
       },
       {
@@ -266,8 +250,29 @@ const projects: TProject[] = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    sourceCodeLink: "https://github.com/",
+    image: plantsproject,
+    sourceCodeLink: "https://github.com/Ritika800/Greenery-Plants-UI-Design",
+  },
+  {
+    name: "Web3 Project",
+    description:
+      "A decentralized platform that connects users' portfolios to the blockchain, enabling the trading of tokenized stocks and other financial assets across various markets. It provides a transparent and secure peer-to-peer system, fractional ownership, and a comprehensive view of purchase details within the user's portfolio.It is also designed for scalability, handling increased traffic and transactions as the business grows. ",
+    tags: [
+      {
+        name: "react js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "web3 js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "express js",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: web3project,
+    sourceCodeLink: "https://github.com/Ritika800/web3-stock-trading",
   },
 ];
 

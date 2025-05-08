@@ -1,11 +1,29 @@
-import React, { Suspense, useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
+import React, { Suspense, useEffect, useState, useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { Group } from "three";
 
 import CanvasLoader from "../layout/Loader";
 
 const Computers: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
+  const computerRef = useRef<Group>(null); 
+
+  useFrame(({ clock }) => {
+    const t = clock.getElapsedTime();
+  
+    if (computerRef.current) {
+      // Smooth oscillating movement
+      computerRef.current.position.x = Math.sin(t) * 0.5; // left-right
+      computerRef.current.position.y = Math.cos(t * 2) * 0.2 - 4; // up-down (adjust -4 for base level)
+      computerRef.current.position.z = Math.sin(t * 0.5) * 0.3 - 1.5; // forward-backward
+  
+      // Continuous rotation
+      computerRef.current.rotation.y += 0.01;
+    }
+  });
+  
+  
 
   return (
     <mesh>
@@ -20,6 +38,7 @@ const Computers: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
       />
       <pointLight intensity={1} />
       <primitive
+        ref={computerRef} 
         object={computer.scene}
         scale={isMobile ? 0.7 : 0.75}
         position={isMobile ? [0, -3, -2.2] : [0, -4.25, -1.5]}
@@ -33,21 +52,15 @@ const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Add a listener for changes to the screen size
     const mediaQuery = window.matchMedia("(max-width: 500px)");
-
-    // Set the initial value of the `isMobile` state variable
     setIsMobile(mediaQuery.matches);
 
-    // Define a callback function to handle changes to the media query
     const handleMediaQueryChange = (event: MediaQueryListEvent) => {
       setIsMobile(event.matches);
     };
 
-    // Add the callback function as a listener for changes to the media query
     mediaQuery.addEventListener("change", handleMediaQueryChange);
 
-    // Remove the listener when the component is unmounted
     return () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };

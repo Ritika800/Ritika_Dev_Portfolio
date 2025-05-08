@@ -20,7 +20,7 @@ const ServiceCard: React.FC<IServiceCard> = ({ index, title, icon }) => (
     tiltEnable
     tiltMaxAngleX={30}
     tiltMaxAngleY={30}
-    glareColor="#aaa6c3"
+    glareColor="#A7FDFD"
   >
     <div className="max-w-[250px] w-full xs:w-[250px]">
       <motion.div
